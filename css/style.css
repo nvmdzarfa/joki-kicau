@@ -80,8 +80,43 @@ body {
 .navbar .navbar-extra a:hover {
   color: var(--primary);
 }
+
 #hamburger-menu {
   display: none;
+}
+
+/* NAVBAR SEARCH FORM */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--bg);
+  padding: 1rem;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: var(--bg);
 }
 
 /* HERO SECTION */
@@ -150,7 +185,7 @@ body {
 .about,
 .price,
 .contact {
-  padding: 10rem 7% 1.4rem;
+  padding: 9rem 7% 0.4rem;
 }
 
 .about h2,
@@ -159,6 +194,7 @@ body {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
+  /* margin-top: 1rem; */
 }
 
 .about h2 span,
@@ -363,6 +399,11 @@ footer .credit a {
   }
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
+  }
+
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
   }
 
   .about .row {
